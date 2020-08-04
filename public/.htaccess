@@ -1,0 +1,13 @@
+RewriteEngine On 
+
+# Redireciona arquivos e pastas para index
+# Restringe acesso a pastas
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [NC,L]
+
+# Usar no server, https
+#RewriteCond %{HTTPS} !=On
+#RewriteRUle ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+Options -Indexes

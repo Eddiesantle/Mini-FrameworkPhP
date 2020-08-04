@@ -1,0 +1,14 @@
+{
+    "name": "projeto-mvc/mini-frameworkphp",
+    "description": "Realizar testes com ferramentas de desenvolvimento",
+    "authors": [{
+        "name": "Eddiesantle",
+        "email": "eng.wed@outlook.com"
+    }],
+    "require": {},
+    "autoload": {
+"psr-4":{
+    "app\\":"app/"
+}
+    }
+}

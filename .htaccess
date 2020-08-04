@@ -1,0 +1,16 @@
+# Ativar a engine de reescrita
+RewriteEngine on
+RewriteBase /
+
+# Se NÃO for um arquivo executar as regras
+RewriteCond %{THE_REQUEST} public/([^\s?]*) [NC]
+
+
+# Redireciona para pasta public se antender as condições acima
+# Flag [L] regra se torna independente
+# Flag [NC] regrac case insensitive
+
+RewriteRule ^ %1 [L,NE,R=302]
+RewriteRule ^((?!public/).*)$ mini-frameworkphp/public/$1 [L]
+
+# Server remove "mini-frameworkphp" nome do projeto RewriteRule.
